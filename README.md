@@ -11,3 +11,8 @@ git clone https://github.com/gwojtak/exercise
 cd exercise
 vagrant up
 ```
+
+The image also launches a web server to view Hadoop related service pages and can be reached at
+```
+http://localhost:8080/hadoop-services.html
+```
