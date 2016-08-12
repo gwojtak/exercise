@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hadoop Quicklinks</title>
+    <style>
+        #menu ul
+        {
+          margin: 0px;
+          padding: 0px;
+          list-style-type: none;
+        }
+
+        #menu li
+        {
+          list-style: none;
+        }
+
+        #menu a
+        {
+          display: block;
+          width: 300px;
+          color: #f6f6e8;
+          background-color: #6a9a1f;
+          text-decoration: none;
+          text-align: center;
+          font-family: arial;
+          padding: 3px;
+        }
+
+        #menu a:hover
+        {
+          background-color: #83c732;;
+        }
+      </style>
+  </head>
+  <body>
+    <div id="menu">
+      <ul>
+        {% for title, port in {'Resource Manager': '8088', 'Node Manager': '8042', 'DFS Health': '50070', 'DataNode': '50075'}.iteritems() %}
+        <ul><a href="http://localhost:{{ port }}">{{ title }}</a></ul>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
